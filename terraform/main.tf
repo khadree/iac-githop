@@ -5,6 +5,7 @@ provider "kubernetes" {
 
 provider "aws" {
   region = var.region
+  #skip_metadata_api_check = true
 }
 
 data "aws_availability_zones" "available" {}
@@ -12,5 +13,3 @@ data "aws_availability_zones" "available" {}
 locals {
   cluster_name = var.clusterName
 }
-
-##
